@@ -22,6 +22,7 @@ $(NAME):	$(OBJS)
 			$(MAKE) -C ./libft
 			cp ./libft/libft.a $(NAME)
 				$(AR) $(NAME) $(OBJS)
+			$(CC) $(CFLAGS) $(OBJS) -L. -lftprintf
 clean:
 			$(MAKE) clean -C ./libft
 			$(RM) $(OBJS)
