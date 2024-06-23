@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arakhurs <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: arakhurs <arakhurs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 16:13:11 by arakhurs          #+#    #+#             */
-/*   Updated: 2022/04/15 16:21:27 by arakhurs         ###   ########.fr       */
+/*   Updated: 2024/06/23 21:23:23 by arakhurs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,17 +76,17 @@ int	ft_printf(const char *s, ...)
 {
 	int		i;
 	int		n;
-	va_list	ap;//argument pointer
+	va_list	ap;
 	i = 0;
 	n = 0;
 	if (!s)
 		return (0);
-	va_start(ap, s);//read ap after s
+	va_start(ap, s);
 	while (s[i])
 	{
 		if (s[i] == '%')
 		{
-			n += ft_formats(ap, s[i + 1]);//checking char after %
+			n += ft_formats(ap, s[i + 1]);
 			i++;
 		}
 		else
